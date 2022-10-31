@@ -1,0 +1,16 @@
+﻿<Application x:Class="Source.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Source"
+             Startup="ApplicationStart">
+    <Application.Resources>
+        
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ResourceDictionaries/CustomStylesRD.xaml"/>
+                <ResourceDictionary Source="ResourceDictionaries/ControlTemplatesRD.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+        
+    </Application.Resources>
+</Application>
