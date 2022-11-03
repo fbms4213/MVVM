@@ -3,7 +3,6 @@ using Source.Repositories.Abstracts;
 using Source.ViewModels.Command;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Windows;
 using System.Windows.Input;
 
@@ -36,6 +35,9 @@ public class MainViewModel : BaseViewModel
     public ICommand EditCommand { get; set; }
     public ICommand DeleteCommand { get; set; }
 
+
+  
+
     public MainViewModel(ICarRepository repository)
     {
         _repository = repository;
@@ -49,6 +51,13 @@ public class MainViewModel : BaseViewModel
         EditCommand = new RelayCommand(ExecuteEditCommand, CanExecuteEditCommand);
         // DeleteCommand = new RelayCommand(ExecuteDeleteCommand, CanExecuteDeleteCommand);
     }
+
+
+    public MainViewModel(ICarRepository repository, int a)
+    {
+        MessageBox.Show(a.ToString());
+    }
+
 
 
     private void ExecuteShowCommand(object? parameter)

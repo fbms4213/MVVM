@@ -9,7 +9,7 @@ using Source.Repositories.Contexts;
 namespace Source.Repositories.Concretes;
 
 
-public class CarRepository : ICarRepository
+public class FakeCarRepository : ICarRepository
 {
     public void Add(Car entity) =>
         FakeDbContext.Cars.Add(entity);
